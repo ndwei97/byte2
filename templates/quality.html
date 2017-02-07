@@ -53,8 +53,6 @@
       <div class="page-header">
 	<h2>Is the data complete?</h2>
 	<ul>
-	<li>If not, what is missing and what concerns does it raise?
-	What is your evidence for this?</li>
 	<li>This is a large dataset containing salaries of 148,654 observations in Sanfransico from 2011 to 2014. Due to the complexity of this dataset, it is susceptible to incompleteness. </li>
     <li>As shown in following table, FT(full time) status was only filled out for the year of 2014. The previous three years people were not categorized. Whatsmore, even in 2014, there is 4 missing value. These 4 persons do not have any values entered into the system including employee name. This would introduce bias when analyzing job status of this dataset. </li>
 
@@ -113,21 +111,17 @@ tr:nth-child(even) {
       <div class="page-header">
     <ul>
 	<h2>Is the data coherent?</h2>
-	<li>Does it make sense relative to itself? Does it match your
-	expectations? Are the distributions sensible? What is your
-	evidence for this?</li>
+
     <li>The data makes sense in most cases. The histogram below makes the structure of the data much clearer - the base salary distributions all seem to follow the same pattern over the years. It also appears that 2014 may have had a slight increase relative to previous years.</li> 
-    <img src="BaseSalaries.png" alt="HTML5 Icon" width="600" height="400">         
+    <img src="../img/BaseSalaries.png" alt="base salaries" width="600" height="495">         
     <li> Additionally, Part Time (PT) employees are compensated according to how much the city uses them - which is very little comparing to Full Time (FT).</li>
-    <img src="TotalPay.png" alt="HTML5 Icon" width="600" height="400">    
+    <img src="../img/TotalPay.png" alt="Total Pay" width="600" height="400">    
     </ul>
       </div>
 
       <div class="page-header">
      <ul>
 	<h2>Is the data correct?</h2>
-	<li>What aspects of this data can you verify? How did you do so? What did
-	you find?</li>
     <li>This dataset is mostly correct. I cross-examined different sources, and the values are very similar. Whatsmore, the organization Transparent California is provided by the Nevada Policy Research Institute as a public service and is dedicated to providing accurate, comprehensive and easily searchable information on the compensation of public employees in California. Therefore, I made the assumption that the dataset is correct.</li>     
    <li> However, there are some some minor error/outliers in this dataset. As shown in table below, there is one person that has negative total pay. This does not make sense at all. This might be caused by an entry error.
    </li>
@@ -185,7 +179,7 @@ tr:nth-child(even) {
 </table>
     
    <li> There is also someone who made over $150,000 in overtime. As shown below, it is highly above all other</li>
-         <img src="OvertimePay.png" alt="HTML5 Icon" width="600" height="400">
+         <img src="../img/OvertimePay.png" alt="Overtime Pay" width="600" height="400">
    
          
        

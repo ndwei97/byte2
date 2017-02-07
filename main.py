@@ -58,12 +58,12 @@ def make_query(cols, limit):
         string_cols = string_cols + ", " + col
     string_cols = string_cols[2:len(string_cols)]
 
-#    query = "SELECT " + string_cols + " FROM " + TABLE_ID
-#
-#    query = query + " LIMIT " + str(limit)
+    query = "SELECT " + string_cols + " FROM " + TABLE_ID
+
+    query = query + " LIMIT " + str(limit)
 
 #    logging.info(query)
-    query = "SELECT * FROM " + TABLE_ID + " WHERE  TotalPay < 0 LIMIT 2"
+#    query = "SELECT * FROM " + TABLE_ID + " WHERE  TotalPay < 0 LIMIT 2"
 
     return query
     
