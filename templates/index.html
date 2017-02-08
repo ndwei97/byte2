@@ -46,16 +46,38 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Exploratory Analysis: SanFransico Salaries vs Job Type  </h1>
-        <p>The primary purpose for this project is to answer </p>
+        <b><p>The purpose of this project is to discover the impacts Job Status and Job Types have on employees’ salaries. 
+</p></b>
       </div>
-      
+      <div class="container" >
       <div class="page-header">
+<ul>
+    <h2>Job Status vs Salaries</h2>
+    <li>There is only two type of job status in this dataset: full time and part time. It is obvious to assume that part time employees are compensated much less than the full time employees since the city uses them much less. To confirm this assumption, I used a density plot to represent the distribution of salaries instead of a Histogram since it allows smoother distributions by smoothing out the noise.</li>
+    <li>In this dataset, there are 3 kinds of compensations: base pay, overtime pay, and benefits. First, let’s take a look at the total payment distribution in following plot. We can clearly see the difference between the two status. Part time employees got paid much less than full time employees.</li>
 <center>    <img src="../img/TotalPay.png" alt="Total Pay" width="600" height="400">    </center>
+    <li>Then let’s breakdown the total pay and see distribution for those three types of compensations. For base pay distribution, it’s following a similar pattern than the total pay as it represents the majority of total pay for most employees. There are a few spikes in the distribution for full time employees. 
+</li>
 <center>    <img src="../img/BasePay.png" alt="Base Pay" width="600" height="400">    </center>
+    <li>For overtime pay, it is not difficult to make the assumption that most people have overtime pay at around 0. However, there is an outlier in full time distribution: someone made more than $170,000 just from overtime pay. This is a bit odd. 
+</li>
 <center>    <img src="../img/OverTimePay.png" alt="Over Time Pay" width="600" height="400">    </center>
+    <li>Finally, when looking at the benefits distribution, we can also see a large difference between full time and part time workers. It is clear that full time workers get much more benefits than part time workers.
+</li>
 <center>    <img src="../img/Benefits.png" alt="Benefits Pay" width="600" height="400">    </center>
-<center><iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col0%2C+col1+from+1U9-xPsscvYIZi3TDRnTINGRyGqub5mTYroSWml3f+order+by+col1+asc+limit+23&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe></center>
-<center><iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col0%2C+SUM(col2)+from+1U9-xPsscvYIZi3TDRnTINGRyGqub5mTYroSWml3f+group+by+col0+order+by+col0+asc+limit+10&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe></center>
+    <li>As a conclusion, we can confirm the previous assuption that part time employees are compensated much less than the full time employees since the city uses them much less</li>
+          </ul>     
+<ul>
+    <h2>Job Type vs Salaries</h2>
+    <li>It’s more difficult to find the relationship between job types and employees’ salaries. First, I tried to categorize all the job types into 23 types. Following bar chart shows the average pay for all 23 job types. The 5 highest paying jobs are: fire department, attorney, police, architectural, and engineering. This matches with our common sense since fire department and police department both encounter more risks. Attorney, architectural and engineering field require more education background comparing to the other job types.  
+</li>
+    <center><iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col0%2C+col1+from+1U9-xPsscvYIZi3TDRnTINGRyGqub5mTYroSWml3f+order+by+col1+asc+limit+23&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe></center>
+<li>Following pie chart provide us a better understanding of SanFrancisco employees’ demographic. According to this dataset, the most common job types are clerk, engineering, and custodian. It is interested to see that even though clerks are the most common job type, they only got paid 3rd to the last in all 23 job types.</li>
+    <center><iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col0%2C+SUM(col2)+from+1U9-xPsscvYIZi3TDRnTINGRyGqub5mTYroSWml3f+group+by+col0+order+by+col0+asc+limit+10&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe></center>
+<li>As a conclusion, job type does have impacts on employee’s salaries and they are depended on the risk involved as well as the education level required for this job type. The more risk or higher education level the job require, the higher the worker is being paid.     
+</li>
+          </ul>
+
       </div> <!-- /page-header -->
     </div> <!-- /container -->
     
